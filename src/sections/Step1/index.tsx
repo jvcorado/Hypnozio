@@ -55,8 +55,8 @@ export const Step1 = () => {
 };
  */
 
-import { Header } from "../../components/Header";
-import { Link, useParams, useLocation } from "react-router-dom";
+/* import { Header } from "../../components/Header"; */
+import { Link, useLocation } from "react-router-dom";
 
 export const Step1 = () => {
   const location = useLocation();

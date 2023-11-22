@@ -1,5 +1,5 @@
-import { Link } from "react-router-dom";
-import { Progress } from "@material-tailwind/react";
+/* import { Link } from "react-router-dom";
+import { Progress } from "@material-tailwind/react"; */
 import Logo from "../../assets/image/logo-hipnozio.svg";
 /* import { IoIosArrowBack } from "react-icons/io"; */
 
@@ -17,10 +17,10 @@ interface Stap {
 
 export const Header = ({
   /*   id, */
-  value,
+  /*  value, */
   /*   isButtonDisabled,
   isWoman, */
-  isHidden,
+  /*  isHidden, */
   isTransparent,
 }: /*   isLink, */
 /*   link, */

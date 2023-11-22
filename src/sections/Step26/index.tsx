@@ -110,10 +110,6 @@ export const Step26 = () => {
 
   const Idade = idade ? parseInt(idade, 10) : 0;
 
-  const IdadeMetabolica = Idade + 5;
-
-  const alturaMetros = altura ? parseInt(altura) / 100 : 0;
-
   // Extrai o valor do parâmetro 'src' da URL atual
   const queryString = location.search;
   const parametro = queryString.substring(queryString.indexOf("src="));

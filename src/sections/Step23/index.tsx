@@ -1,6 +1,6 @@
-import { Button, Input, step } from "@material-tailwind/react";
+import { Button, Input } from "@material-tailwind/react";
 import { Header } from "../../components/Header";
-import { Link, useNavigate, useLocation, useParams } from "react-router-dom";
+import { useNavigate, useLocation, useParams } from "react-router-dom";
 import { useState } from "react";
 
 export const Step23 = () => {

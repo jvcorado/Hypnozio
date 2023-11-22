@@ -54,8 +54,8 @@ export const Step1 = () => {
   );
 };
  */
-
-import { Header } from "../../components/Header";
+/* 
+import { Header } from "../../components/Header"; */
 import { Link, useParams, useLocation } from "react-router-dom";
 
 export const Step6 = () => {
