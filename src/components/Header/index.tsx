@@ -23,7 +23,7 @@ export const Header = ({ inicio, final }: Step) => {
 
   return (
     <header
-      className={`flex flex-col gap-5 py-5 px-3 md:px-5 w-full sticky top-0 z-50`}
+      className={`bg-[#fbfdff] flex flex-col gap-5 py-5 px-3 md:px-5 w-full sticky top-0 z-50`}
     >
       <style>
         {`
