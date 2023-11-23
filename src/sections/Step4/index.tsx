@@ -28,6 +28,8 @@ export const Step4 = () => {
           pergunta={item.pergunta}
           opcoes={item.opcoes}
           isButtonDisabled={true}
+          inicio="13.05%"
+          final="17.04%"
         />
       ))}
     </>

@@ -37,6 +37,8 @@ export const Step5 = () => {
           opcoes={item.opcoes}
           isButtonDisabled={true}
           isLink={true}
+          inicio="17.04%"
+          final="21.75%"
         />
       ))}
     </>

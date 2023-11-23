@@ -38,7 +38,7 @@ const planos = [
     valorAntigo: "59.90",
     valor: "49.00",
     popular: "",
-    link: "https://pay.hotmart.com/A87115324N?off=3ho0vf95&checkoutMode=10&bid=1699287339028",
+    link: "https://pay.hotmart.com/M88583033R?off=t7hsp5i1&checkoutMode=6",
     desc: `Prorrogado a cada 7 dias após a oferta introdutória de 7 dias pelo preço total de $ 9, 99`,
   },
   {
@@ -46,7 +46,7 @@ const planos = [
     valorAntigo: "126.90",
     valor: "79.00",
     popular: "Most Popular",
-    link: "https://pay.hotmart.com/A87115324N?off=ortcnz4f&checkoutMode=10&bid=1699287134869",
+    link: "https://pay.hotmart.com/M88583033R?off=g358x3tf&checkoutMode=6",
     desc: "Estendido mensalmente após oferta introdutória de 1 mês pelo preço total de $ 28,56",
   },
   {
@@ -54,7 +54,7 @@ const planos = [
     valorAntigo: "199.90",
     valor: "127.00",
     popular: "",
-    link: "https://pay.hotmart.com/A87115324N?off=0iehvih8&checkoutMode=10&bid=1699286691112",
+    link: "https://pay.hotmart.com/M88583033R?off=49xej25e&checkoutMode=6",
     desc: "Prorrogado a cada 3 meses após a oferta introdutória de 3 meses pelo preço total de $ 42,84",
   },
 ];
@@ -525,7 +525,9 @@ export const Step26 = () => {
             </div>
 
             <div className="flex flex-col gap-3 justify-between items-center bg-[#F2F4FF]  px-20 p-5 rounded-lg ">
-              <p className="text-2xl text-[#3a5b9]">Mudando a perspectiva</p>
+              <p className="text-2xl text-[#3a5b9] text-center">
+                Mudando a perspectiva
+              </p>
               <audio controls className="custom-audio-controls">
                 <source src={Aula} type="audio/mp3" />
               </audio>

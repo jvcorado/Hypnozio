@@ -41,7 +41,6 @@ export const Home = () => {
               <strong className="text-[#FF4958]">excesso de peso</strong> usando
               a auto-hipnose
             </h1>{" "}
-            //oi
             <p className="text-base md:text-sm lg:text-base font-light text-[#1b1b1f]">
               Nosso programa de hipnoterapia foi desenvolvido para ajudá-lo a
               mudar sua relação com a comida, no conforto da sua casa.

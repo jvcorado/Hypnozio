@@ -15,21 +15,17 @@ interface CommonPageProps {
   isHidden?: boolean;
   isTransparent?: boolean;
   isLink?: boolean;
+  inicio: string;
+  final: string;
 }
 
 const CommonPage: React.FC<CommonPageProps> = ({
   step,
   pergunta,
   opcoes,
-  isButtonDisabled = true,
-  isHidden = false,
-  isTransparent = false,
-  isLink = false,
+  inicio,
+  final,
 }) => {
-  // Verifica se há uma opção com isWoman definido como true
-
-  const isWoman = opcoes.some((opcao) => opcao.isWoman);
-
   const { idade, opcao, altura, peso, pesoDesejado } = useParams();
   // Use altura, peso, pesoDesejado conforme necessário
   console.log("Idade:", idade);
@@ -40,15 +36,7 @@ const CommonPage: React.FC<CommonPageProps> = ({
 
   return (
     <section className="flex flex-col h-full md:h-screen ">
-      <Header
-        isButtonDisabled={isButtonDisabled}
-        value={isWoman ? step * 4.76190476 : step * 3.84615385}
-        id={step}
-        isWoman={isWoman}
-        isHidden={isHidden}
-        isTransparent={isTransparent}
-        isLink={isLink}
-      />
+      <Header inicio={inicio} final={final} />
       <div className="container m-auto flex flex-col items-center  overflow-y-auto my-10 gap-7 px-3 md:px-5 ">
         <div className="w-full md:w-[60%] xl:w-[50%] 2xl:w-[30%]  flex flex-col items-start gap-10">
           <h1 className="text-2xl md:text-xl !leading-[30px] text-start text-black w-full">

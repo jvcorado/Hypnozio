@@ -56,6 +56,8 @@ export const Step12 = () => {
           img={Imagem}
           isButtonDisabled
           value={item.step}
+          inicio="48.35%"
+          final="52.7%"
         />
       ))}
     </>

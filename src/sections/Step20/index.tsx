@@ -36,6 +36,8 @@ export const Step20 = () => {
           step={item.step}
           pergunta={item.pergunta}
           opcoes={item.opcoes}
+          inicio="83.15%"
+          final="87.5%"
         />
       ))}
     </>

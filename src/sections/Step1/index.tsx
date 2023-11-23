@@ -1,61 +1,4 @@
-/* import CommonPage from "../../components/Page";
-import { useState } from "react";
-
-export const Step1 = () => {
-  const info = [
-    {
-      step: 1,
-      pergunta: "Qual é a sua idade?",
-      opcoes: [
-        {
-          text: "18-21",
-          emoji: "",
-        },
-        {
-          text: "21-30",
-          emoji: "",
-        },
-        {
-          text: "31-40",
-          emoji: "",
-        },
-        {
-          text: "41-50",
-          emoji: "",
-        },
-        {
-          text: "51-60",
-          emoji: "",
-        },
-        {
-          text: "61-70",
-          emoji: "",
-        },
-        {
-          text: "Mais de 70",
-          emoji: "",
-        },
-      ],
-    },
-  ];
-
-  return (
-    <>
-      {info.map((item) => (
-        <CommonPage
-          key={item.step}
-          step={item.step}
-          pergunta={item.pergunta}
-          opcoes={item.opcoes}
-          isLink={true}
-        />
-      ))}
-    </>
-  );
-};
- */
-
-/* import { Header } from "../../components/Header"; */
+import { Header } from "../../components/Header";
 import { Link, useLocation } from "react-router-dom";
 
 export const Step1 = () => {
@@ -67,15 +10,7 @@ export const Step1 = () => {
 
   return (
     <section className="flex flex-col h-full md:h-screen ">
-      {/*  <Header
-        isButtonDisabled={isButtonDisabled}
-        value={isWoman ? step * 4.76190476 : step * 3.84615385}
-        id={step}
-        isWoman={isWoman}
-        isHidden={isHidden}
-        isTransparent={isTransparent}
-        isLink={isLink}
-      /> */}
+      <Header inicio="0%" final="4.35%" />
       <div className="container m-auto flex flex-col items-center  overflow-y-auto my-10 gap-7 px-3 md:px-5 ">
         <div className="w-full md:w-[60%] xl:w-[50%] 2xl:w-[30%]  flex flex-col items-start gap-10">
           <h1 className="text-2xl md:text-xl !leading-[30px] text-start text-black w-full">

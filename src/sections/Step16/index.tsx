@@ -38,6 +38,8 @@ export const Step16 = () => {
           key={item.step}
           step={item.step}
           pergunta={item.pergunta}
+          inicio="65.75%"
+          final="70.1%"
         />
       ))}
     </>

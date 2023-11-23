@@ -12,6 +12,8 @@ interface PageSelectedProps {
     emoji: string;
     isWoman?: boolean;
   }[];
+  inicio: string;
+  final: string;
 }
 
 // eslint-disable-next-line @typescript-eslint/no-unused-vars
@@ -20,6 +22,8 @@ export const PageSelected = ({
   pergunta,
   pergunta2,
   opcoes,
+  inicio,
+  final,
 }: PageSelectedProps) => {
   const [selectedOptions, setSelectedOptions] = useState<string[]>([]);
 
@@ -80,7 +84,7 @@ export const PageSelected = ({
 
   return (
     <section className="flex flex-col 2xl:h-screen items-center justify-center ">
-      <Header id={step} value={step * 3.84615385} key={step} isButtonDisabled />
+      <Header inicio={inicio} final={final} />
       <ul className=" container m-auto flex flex-col min-h-[870px] overflow-x-auto items-center pt-10 justify-start px-3 md:px-5">
         <div className="w-full md:w-[60%] xl:w-[50%] 2xl:w-[30%]  flex flex-col items-start gap-10">
           <li className="flex flex-col w-full gap-2 " key={step}>

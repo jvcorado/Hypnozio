@@ -42,6 +42,8 @@ const Step9 = () => {
           step={item.step}
           pergunta={item.pergunta}
           opcoes={item.opcoes}
+          inicio="35.2%"
+          final="39.55%"
         />
       ))}
     </>

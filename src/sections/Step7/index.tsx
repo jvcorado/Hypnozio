@@ -56,6 +56,8 @@ const Step7 = () => {
           img={Imagem}
           isButtonDisabled
           value={item.step}
+          inicio="26.5%"
+          final="30.85%"
         />
       ))}
     </>

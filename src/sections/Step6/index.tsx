@@ -57,6 +57,7 @@ export const Step1 = () => {
 /* 
 import { Header } from "../../components/Header"; */
 import { Link, useParams, useLocation } from "react-router-dom";
+import { Header } from "../../components/Header";
 
 export const Step6 = () => {
   const { idade } = useParams();
@@ -69,15 +70,7 @@ export const Step6 = () => {
 
   return (
     <section className="flex flex-col h-full md:h-screen ">
-      {/*  <Header
-        isButtonDisabled={isButtonDisabled}
-        value={isWoman ? step * 4.76190476 : step * 3.84615385}
-        id={step}
-        isWoman={isWoman}
-        isHidden={isHidden}
-        isTransparent={isTransparent}
-        isLink={isLink}
-      /> */}
+      <Header inicio="21.75%" final="26.5%" />
       <div className="container m-auto flex flex-col items-center  overflow-y-auto my-10 gap-7 px-3 md:px-5 ">
         <div className="w-full md:w-[60%] xl:w-[50%] 2xl:w-[30%]  flex flex-col items-start gap-10">
           <h1 className="text-2xl md:text-xl !leading-[30px] text-start text-black w-full">

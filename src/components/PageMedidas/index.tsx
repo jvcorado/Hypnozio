@@ -6,9 +6,16 @@ import { Link, useParams, useLocation } from "react-router-dom";
 interface CommonPageProps {
   step: number;
   pergunta: string;
+  inicio: string;
+  final: string;
 }
 
-export const PageMedidas: React.FC<CommonPageProps> = ({ step, pergunta }) => {
+export const PageMedidas: React.FC<CommonPageProps> = ({
+  step,
+  pergunta,
+  inicio,
+  final,
+}) => {
   const [altura, setAltura] = useState<number>();
   const [peso, setPeso] = useState<number>();
   const [pesoDesejado, setPesoDesejado] = useState<number>();
@@ -60,7 +67,7 @@ export const PageMedidas: React.FC<CommonPageProps> = ({ step, pergunta }) => {
 
   return (
     <section className="flex flex-col h-full md:h-screen">
-      <Header value={step * 3.84615385} id={step} />
+      <Header inicio={inicio} final={final} />
       <div className="container m-auto flex flex-col items-center my-10 px-3 md:px-5">
         <div className="w-full md:w-[60%] xl:w-[50%] 2xl:w-[30%]  flex flex-col items-start gap-3">
           <h1 className="text-2xl md:text-xl !leading-[30px] text-start text-black w-full">

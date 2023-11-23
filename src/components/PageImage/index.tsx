@@ -11,27 +11,24 @@ interface PageImageProps {
   text2?: string;
   text3?: string;
   textRodape?: string;
+  inicio: string;
+  final: string;
 }
 
 export const PageImagem = ({
-  isButtonDisabled = true,
   rounded = true,
   img,
-  value,
   id,
   text,
   text2,
   text3,
   textRodape,
+  inicio,
+  final,
 }: PageImageProps) => {
   return (
     <section className={`flex flex-col items-center justify-center `}>
-      <Header
-        id={id}
-        isButtonDisabled={isButtonDisabled}
-        value={value}
-        key={id}
-      ></Header>
+      <Header inicio={inicio} final={final}></Header>
       <div
         className={`pt-10 container m-auto  w-full md:w-[60%] xl:w-[50%] 2xl:w-[20%] flex flex-col items-center gap-5 justify-start px-3 md:px-5`}
       >

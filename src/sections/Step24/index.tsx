@@ -1,4 +1,3 @@
-import { Header } from "../../components/Header";
 import { useEffect, useState, useRef } from "react";
 import { BsFillCheckCircleFill } from "react-icons/bs";
 import { useNavigate, useLocation, useParams } from "react-router-dom";
@@ -74,13 +73,7 @@ export const Step24 = () => {
   });
 
   return (
-    <div className="bg-[#FBFDFF]   md:h-screen flex flex-col ">
-      <Header
-        id={25}
-        isButtonDisabled={true}
-        value={25 * 3.84615385}
-        key={25}
-      ></Header>
+    <div className="bg-[#FBFDFF]  md:h-screen flex flex-col ">
       <section className="quadro ultimo !border-0 !shadow-none !flex-col !items-center !gap-5 py-10 p-3 md:px-5 ">
         <div className="conteudo !border-0 !shadow-none !p-0">
           <div className="final !border-0 !shadow-none">

@@ -42,7 +42,7 @@ export const Step23 = () => {
   };
   return (
     <section className="bg-[#FBFDFF]  h-screen flex flex-col  ">
-      <Header id={26} value={26 * 3.84615385} isButtonDisabled={true}></Header>
+      <Header inicio="96.2%" final="100%" />
       <div className="container m-auto flex flex-col items-center  overflow-y-auto my-10 gap-7 px-3 md:px-5bg-brown-600">
         <div className="w-full md:w-[60%] xl:w-[50%] 2xl:w-[30%]  flex flex-col items-start gap-5">
           <h1 className="text-center text-2xl text-black w-full ">

@@ -14,10 +14,10 @@ body {
   width: 100%;
 }
 .progresso .atual {
-  --bolinha-final: 100%;
+  --bolinha-final: 25%;
   --bolinha-inicio: 0%;
   animation: mexerBolinha 1s linear forwards;
-  background-color: var(--cor-pele-claro);
+  background-color: #3a5ba9;
   height: 2px;
   left: 0;
   position: absolute;
@@ -25,7 +25,7 @@ body {
   width: 0%;
 }
 .progresso .atual .bolinha {
-  background-color: var(--cor-pele-claro);
+  background-color: #3a5ba9;
   border-radius: 50%;
   height: 12px;
   width: 12px;

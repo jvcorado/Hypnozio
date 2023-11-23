@@ -48,7 +48,9 @@ export const PaginaDeEntrega = () => {
           </div>
 
           <div className="flex flex-col gap-3 justify-between items-center bg-[#F2F4FF]  px-20 p-5 rounded-lg ">
-            <p className="text-2xl text-[#3a5b9]">Mudando a perspectiva</p>
+            <p className="text-2xl text-[#3a5b9] text-center">
+              Mudando a perspectiva
+            </p>
             <audio controls className="custom-audio-controls">
               <source src={Aula} type="audio/mp3" />
             </audio>
