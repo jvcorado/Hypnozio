@@ -74,7 +74,7 @@ export const Step24 = () => {
 
   return (
     <div className="bg-[#FBFDFF]  md:h-screen flex flex-col ">
-      <section className="quadro ultimo !border-0 !shadow-none !flex-col !items-center !gap-5 py-10 p-3 md:px-5 ">
+      <section className="quadro ultimo !border-0 !shadow-none !flex-col !items-center !gap-5 py-10  md:px-5 ">
         <div className="conteudo !border-0 !shadow-none !p-0">
           <div className="final !border-0 !shadow-none">
             <h2 className="!text-2xl !font-normal text-center">

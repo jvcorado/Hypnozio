@@ -43,7 +43,7 @@ const Opcao: React.FC<OpcaoProps> = ({ step, text }) => {
       to={proximaRota}
       className="w-full bg-[#ffffff] py-[16px] px-[24px] rounded-lg border  border-[#8aa8fcab] flex items-center justify-between hover:shadow-2xl hover:border-[#00000083]"
     >
-      <div className="flex items-center gap-5">
+      <div className="flex items-center gap-8">
         <p className="text-base leading-5">{text}</p>
       </div>
     </Link>

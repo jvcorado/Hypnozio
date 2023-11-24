@@ -85,16 +85,16 @@ export const PageSelected = ({
   return (
     <section className="flex flex-col 2xl:h-screen items-center justify-center ">
       <Header inicio={inicio} final={final} />
-      <ul className=" container m-auto flex flex-col min-h-[870px] overflow-x-auto items-center pt-10 justify-start px-3 md:px-5">
+      <ul className=" container m-auto flex flex-col min-h-[870px] overflow-x-auto items-center pt-10 justify-start px-8 md:px-5">
         <div className="w-full md:w-[60%] xl:w-[50%] 2xl:w-[30%]  flex flex-col items-start gap-10">
-          <li className="flex flex-col w-full gap-2 " key={step}>
+          <li className="flex flex-col w-full gap-4 " key={step}>
             <div className="flex flex-col gap-3 mb-5 ">
               <label className="text-left text-base text-black w-full ">
                 {pergunta}
               </label>
               <label
-                className={`text-left
-                 text-black w-full text-2xl ${pergunta2 ? "" : "hidden"}`}
+                className={`text-left 
+                 text-black w-full text-[22px] ${pergunta2 ? "" : "hidden"}`}
               >
                 {pergunta2}
               </label>

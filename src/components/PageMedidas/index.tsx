@@ -68,8 +68,8 @@ export const PageMedidas: React.FC<CommonPageProps> = ({
   return (
     <section className="flex flex-col h-full md:h-screen">
       <Header inicio={inicio} final={final} />
-      <div className="container m-auto flex flex-col items-center my-10 px-3 md:px-5">
-        <div className="w-full md:w-[60%] xl:w-[50%] 2xl:w-[30%]  flex flex-col items-start gap-3">
+      <div className="container m-auto flex flex-col items-center my-10 px-8 md:px-5">
+        <div className="w-full md:w-[60%] xl:w-[50%] 2xl:w-[30%]  flex flex-col items-start gap-10">
           <h1 className="text-2xl md:text-xl !leading-[30px] text-start text-black w-full">
             {pergunta}
           </h1>
@@ -86,13 +86,13 @@ export const PageMedidas: React.FC<CommonPageProps> = ({
               favor insira um peso inferior ao seu peso atual
             </p>
           )}
-          <div className="w-full flex flex-col gap-5">
+          <div className="w-full flex flex-col gap-7">
             <Input
               size="lg"
               label="Altura"
               crossOrigin={undefined}
               placeholder="cm"
-              className="placeholder:text-right placeholder:text-black placeholder:text-base"
+              className="placeholder:text-right placeholder:text-black placeholder:text-base h-[50px]"
               value={altura}
               onChange={handleAlturaChange}
             />
@@ -101,7 +101,7 @@ export const PageMedidas: React.FC<CommonPageProps> = ({
               label="Peso"
               placeholder="kg"
               crossOrigin={undefined}
-              className="placeholder:text-right placeholder:text-black placeholder:text-base"
+              className="placeholder:text-right placeholder:text-black placeholder:text-base h-[50px]"
               value={peso}
               onChange={handlePesoChange}
             />
@@ -110,7 +110,7 @@ export const PageMedidas: React.FC<CommonPageProps> = ({
               label="Peso desejado"
               placeholder="kg"
               crossOrigin={undefined}
-              className=" placeholder:text-right placeholder:text-black placeholder:text-base"
+              className=" placeholder:text-right placeholder:text-black placeholder:text-base h-[50px]"
               value={pesoDesejado}
               onChange={handlePesoDesejadoChange}
             />

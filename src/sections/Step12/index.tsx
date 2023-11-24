@@ -5,41 +5,6 @@ export const Step12 = () => {
   const info = [
     {
       step: 12,
-      pergunta: "Você tem algum problema de saúde?",
-      opcoes: [
-        {
-          text: "Ansiedade / Estresse",
-          emoji: "",
-        },
-        {
-          text: "Depressão",
-          emoji: "",
-        },
-        {
-          text: "Fumar",
-          emoji: "",
-        },
-        {
-          text: "Dor crônica",
-          emoji: "",
-        },
-        {
-          text: "Problemas de sono",
-          emoji: "",
-        },
-        {
-          text: "Problemas de pele",
-          emoji: "",
-        },
-        {
-          text: "Outro",
-          emoji: "",
-        },
-        {
-          text: "Nenhum",
-          emoji: "",
-        },
-      ],
     },
   ];
 

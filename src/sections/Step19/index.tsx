@@ -12,7 +12,7 @@ export const Step19 = () => {
           emoji: "",
         },
         {
-          text: "Importante",
+          text: "Pouco Importante",
           emoji: "",
         },
         {

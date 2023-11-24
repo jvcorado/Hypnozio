@@ -43,7 +43,7 @@ export const Step23 = () => {
   return (
     <section className="bg-[#FBFDFF]  h-screen flex flex-col  ">
       <Header inicio="96.2%" final="100%" />
-      <div className="container m-auto flex flex-col items-center  overflow-y-auto my-10 gap-7 px-3 md:px-5bg-brown-600">
+      <div className="container m-auto flex flex-col items-center  overflow-y-auto my-10 gap-7 px-8 md:px-5">
         <div className="w-full md:w-[60%] xl:w-[50%] 2xl:w-[30%]  flex flex-col items-start gap-5">
           <h1 className="md:text-center text-left  text-2xl text-black w-full ">
             Um último passo!
@@ -59,8 +59,8 @@ export const Step23 = () => {
           >
             <Input
               type="email"
-              placeholder="michel@gmail.com"
-              className="m-auto !border-2 !py-6 !border-gray-300 bg-white text-gray-900 ring-4 ring-transparent placeholder:text-base placeholder:text-gray-500 focus:!border-gray-900 focus:!border-t-gray-900"
+              placeholder="Endereço de email"
+              className="m-auto !border-1 !py-6 !border-gray-600 bg-white text-gray-900 ring-4 ring-transparent placeholder:text-base placeholder:text-gray-900 focus:!border-gray-900 focus:!border-t-gray-900"
               labelProps={{
                 className: "hidden",
               }}

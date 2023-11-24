@@ -40,7 +40,7 @@ const Step9 = () => {
         <PageSelected
           key={item.step}
           step={item.step}
-          pergunta={item.pergunta}
+          pergunta2={item.pergunta}
           opcoes={item.opcoes}
           inicio="35.2%"
           final="39.55%"

@@ -30,7 +30,7 @@ export const PageImagem = ({
     <section className={`flex flex-col items-center justify-center `}>
       <Header inicio={inicio} final={final}></Header>
       <div
-        className={`pt-10 container m-auto  w-full md:w-[60%] xl:w-[50%] 2xl:w-[20%] flex flex-col items-center gap-5 justify-start px-3 md:px-5`}
+        className={`pt-10 container m-auto  w-full md:w-[60%] xl:w-[50%] 2xl:w-[20%] flex flex-col items-center gap-5 justify-start px-8 md:px-5`}
       >
         <h1 className={`text-left text-base  text-black `}>{text}</h1>
         <h1 className={`text-left  text-base  text-black w-full`}>{text2}</h1>

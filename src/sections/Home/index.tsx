@@ -30,9 +30,9 @@ export const Home = () => {
 
   return (
     <div className="flex flex-col justify-between  md:h-screen">
-      <div className="container m-auto px-3 py-10">
+      <div className="container m-auto px-8 py-10">
         <div className="mb-10">
-          <img src={Logo} alt="Logo Hipnózio" />
+          <img src={Logo} alt="Logo Hipnózio " className="w-[150px]" />
         </div>
         <div className="flex flex-col md:flex-row items-center justify-between gap-10 md:gap-2 2xl:gap-10 ">
           <div className="flex-1 flex flex-col gap-5">
@@ -53,7 +53,7 @@ export const Home = () => {
             </p>
             <div className="grid grid-cols-1 md:grid-cols-2  2xl:grid-cols-3 items-center justify-center gap-4">
               <Link
-                to={`/woman/step/1/?${parametro}`}
+                to={`/step/1/?${parametro}`}
                 className="bg-[#FF4958] rounded-md p-5 text-center font-bold text-lg text-white "
               >
                 Mulher
@@ -65,7 +65,7 @@ export const Home = () => {
                 Homem
               </Link>
               <Link
-                to={`/?${parametro}`}
+                to={`/step/1/?${parametro}`}
                 className="bg-white border  border-black rounded-md p-5 text-center font-bold text-lg text-black"
               >
                 Outro
@@ -100,7 +100,7 @@ export const Home = () => {
           </div>
         </div>
       </div>
-      <footer className=" bg-[#303034] text-white py-10">
+      {/*    <footer className=" bg-[#303034] text-white py-10">
         <div className="container m-auto px-3   flex flex-col gap-5">
           <p>
             Rebilita UAB, Gedimino str. 45-7,
@@ -132,7 +132,7 @@ export const Home = () => {
             <li>® 2023 Hipnózio. Todos os direitos reservados</li>
           </ul>
         </div>
-      </footer>
+      </footer> */}
     </div>
   );
 };

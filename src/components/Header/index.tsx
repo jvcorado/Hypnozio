@@ -23,7 +23,7 @@ export const Header = ({ inicio, final }: Step) => {
 
   return (
     <header
-      className={`bg-[#fbfdff] flex flex-col gap-5 py-5 px-3 md:px-5 w-full sticky top-0 z-50`}
+      className={`bg-[#fbfdff] flex flex-col gap-5 py-5 px-8 md:px-5 w-full sticky top-0 z-50`}
     >
       <style>
         {`
@@ -38,7 +38,7 @@ export const Header = ({ inicio, final }: Step) => {
         `}
       </style>
       <div className="flex gap-3 items-center">
-        <img src={Logo} alt="Logo" />
+        <img src={Logo} alt="Logo" className="w-[130px]" />
         <div className="progresso">
           <div className="atual" style={estilo}>
             <div className="bolinha" onClick={handleBolinhaInicioChange}></div>

@@ -139,7 +139,7 @@ export const router = createBrowserRouter([
     element: <Step26 />,
   },
   {
-    path: "/step/27/:idade/:opcao/:altura/:peso/:pesoDesejado/*",
+    path: "/step/27/*",
     element: <PaginaDeEntrega />,
   },
 ]);

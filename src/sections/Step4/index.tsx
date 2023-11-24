@@ -27,7 +27,7 @@ export const Step4 = () => {
           pergunta={item.pergunta}
           opcoes={item.opcoes}
           isButtonDisabled={true}
-          text1="Um número crescente de nutricionistas recomenda o Hypnozio."
+          text1="Um número crescente de nutricionistas recomenda o Hypnosia."
           inicio="13.05%"
           final="17.04%"
         />

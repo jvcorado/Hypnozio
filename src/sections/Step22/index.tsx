@@ -4,7 +4,7 @@ export const Step22 = () => {
   const info = [
     {
       step: 22,
-      pergunta: "Qual é o melhor horário do seu dia para ouvir Hypnozio?",
+      pergunta: "Qual é o melhor horário do seu dia para ouvir Hypnosia?",
 
       opcoes: [
         {

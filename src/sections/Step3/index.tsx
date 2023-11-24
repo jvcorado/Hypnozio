@@ -49,9 +49,9 @@ const Step3 = () => {
         <PageImagem
           key={item.step}
           id={item.step}
-          text="Hypnozio ajuda a gerenciar seu relacionamento com a comida, “consertando” falhas de comunicação entre o cérebro e o estômago.
+          text="Hypnosia ajuda a gerenciar seu relacionamento com a comida, “consertando” falhas de comunicação entre o cérebro e o estômago.
         "
-          textRodape="Vamos começar aprendendo mais sobre você, para que possamos avaliar se o Hypnozio também pode ajudá-lo."
+          textRodape="Vamos começar aprendendo mais sobre você, para que possamos avaliar se a Hypnosia também pode ajudá-lo."
           img={Imagem}
           isButtonDisabled
           value={item.step}

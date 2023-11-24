@@ -71,7 +71,7 @@ export const Step6 = () => {
   return (
     <section className="flex flex-col h-full md:h-screen ">
       <Header inicio="21.75%" final="26.5%" />
-      <div className="container m-auto flex flex-col items-center my-10 gap-7 px-3 md:px-5 ">
+      <div className="container m-auto flex flex-col items-center my-10 gap-7 px-8 md:px-5 ">
         <div className="w-full md:w-[60%] xl:w-[50%] 2xl:w-[30%]  flex flex-col items-start gap-5">
           <h1 className="text-2xl md:text-xl !leading-[30px] text-start text-black w-full">
             Sabemos que os motivos do excesso de peso de cada pessoa são únicos.
@@ -79,7 +79,7 @@ export const Step6 = () => {
           </h1>
           <p>Selecione a sua opção:</p>
 
-          <div className="w-full flex flex-col items-center justify-center gap-2">
+          <div className="w-full flex flex-col items-center justify-center gap-4">
             <Link
               // eslint-disable-next-line @typescript-eslint/restrict-template-expressions
               to={`/step/7/${idade}/1/?${parametro}`}

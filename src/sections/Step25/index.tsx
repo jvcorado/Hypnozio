@@ -65,14 +65,14 @@ export const Step25 = () => {
 
     return (
       <>
-        <div className="container m-auto px-3 py-5">
+        <div className="container m-auto px-8 md:px-0 py-5">
           <header className="w-full  mb-12">
-            <img src={Logo} alt="Hypnozio" />
+            <img src={Logo} alt="Hypnozio" className="w-[130px]" />
           </header>
           <div className="gap-10 flex flex-col items-center justify-center ">
             <div className="text-center 2xl:w-[60%] m-auto flex flex-col gap-5">
               <h1 className="text-3xl md:text-4xl leading-10">
-                É provável que Hypnozio funcione para você!
+                É provável que Hypnosia funcione para você!
               </h1>
 
               <p className="text-lg md:text-2xl leading-7">
@@ -84,7 +84,7 @@ export const Step25 = () => {
                 <span className="text-red-500 font-bold">
                   {diferencaDePeso}kg
                 </span>{" "}
-                até fevereiro de 2024
+                até janeiro de 2024
               </p>
             </div>
             <div className="hidden 2xl:block relative h-[400px] border rounded-lg shadow-xl w-[50%] m-auto mt-10 p-10">
@@ -98,15 +98,15 @@ export const Step25 = () => {
                 <div className="relative top-[205px] left-[50px] w-[30px] h-[30px] rounded-full bg-white border-[5px] border-red-300"></div>
                 {/* Futuro */}
                 <div className="shadow-xl bg-[#DAE2FF] relative top-[250px] left-[430px] w-[150px] py-1 rounded-lg flex flex-col  items-center justify-center">
-                  <p className="font-semibold text-center">Com Hipnózio</p>
+                  <p className="font-semibold text-center">Com Hipnosia</p>
                   <p className="text-[#3A5BA9] font-bold">{pesoDesejado}kg</p>
                 </div>
                 <div className="relative top-[255px] left-[490px] w-[30px] h-[30px] rounded-full bg-white border-[5px] border-[#BDDCFF]"></div>
                 {/* Grafico */}
                 <img src={Graph} alt="grafíco" />
                 <div className="flex justify-between py-3 px-10">
-                  <p>Novembro</p>
-                  <p>Fevereiro de 2024</p>
+                  <p>Hoje</p>
+                  <p>Janeiro de 2024</p>
                 </div>
               </div>
             </div>
@@ -133,8 +133,8 @@ export const Step25 = () => {
                 {/* Grafico */}
                 <img src={Graph} alt="grafíco" />
                 <div className="flex justify-between py-3 px-1">
-                  <p>Novembro</p>
-                  <p>Fevereiro de 2024</p>
+                  <p>Hoje</p>
+                  <p>Janeiro de 2024</p>
                 </div>
               </div>
             </div>
@@ -158,8 +158,8 @@ export const Step25 = () => {
                 {/* Grafico */}
                 <img src={Graph} alt="grafíco" />
                 <div className="flex justify-between py-3 px-10">
-                  <p>Novembro</p>
-                  <p>Fevereiro de 2024</p>
+                  <p>Hoje</p>
+                  <p>Janeiro de 2024</p>
                 </div>
               </div>
             </div>
@@ -183,8 +183,8 @@ export const Step25 = () => {
                 {/* Grafico */}
                 <img src={Graph} alt="grafíco" />
                 <div className="flex justify-between py-3 px-10">
-                  <p>Novembro</p>
-                  <p>Fevereiro de 2024</p>
+                  <p>Hoje</p>
+                  <p>Janeiro de 2024</p>
                 </div>
               </div>
             </div>
@@ -339,7 +339,9 @@ export const Step25 = () => {
                 <strong className="text-xl leading-6">IMC</strong>
                 <img src={Peso} alt="" className="w-[105px] h-[122px]" />
                 <div>
-                  <p>IMC {imcDesejado.toFixed(1)}</p>
+                  <p className="text-xl font-semibold">
+                    IMC {imcDesejado.toFixed(1)}
+                  </p>
                   {imcDesejado < 18.5 ? (
                     <p>Você está Abaixo do peso</p>
                   ) : imcDesejado >= 18.5 && imcDesejado < 24.9 ? (
@@ -440,7 +442,7 @@ export const Step25 = () => {
                 serviços excepcionais para ajudá-lo a atingir seus objetivos de
                 perda de peso.
               </p>
-              <p>Equipe Hipnózio</p>
+              <p>Equipe Hipnosia</p>
             </div>
           </div>
         </div>

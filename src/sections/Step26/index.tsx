@@ -1,7 +1,7 @@
 import { Radio } from "@material-tailwind/react";
 import Aula from "../../assets/aula.mp3";
 import { useEffect, useState } from "react";
-import { Card, CardBody, Typography } from "@material-tailwind/react";
+import { Card, CardBody } from "@material-tailwind/react";
 import { useLocation, useParams } from "react-router-dom";
 import {
   Accordion,
@@ -15,6 +15,13 @@ import Client2 from "../../assets/image/client2.webp";
 import Client3 from "../../assets/image/client3.webp";
 import { FaStar } from "react-icons/fa";
 import { FaArrowRight } from "react-icons/fa";
+import Logo from "../../assets/image/logo-hipnozio.svg";
+
+import { Swiper, SwiperSlide } from "swiper/react";
+import { Pagination } from "swiper/modules";
+// Import Swiper styles
+import "swiper/css";
+import "swiper/css/pagination";
 
 import React from "react";
 
@@ -50,7 +57,7 @@ const planos = [
     valorReal: "127.00",
     valorMensal: "21.17",
     popular: "Most Popular",
-    link: "https://pay.hotmart.com/M88583033R?off=49xej25e&checkoutMode=6",
+    link: "https://pay.hotmart.com/M88583033R?off=49xej25e&checkoutMode=10&bid=1700760505704",
     desc: "Estendido mensalmente após oferta introdutória de 1 mês pelo preço total de $ 28,56",
   },
   {
@@ -59,7 +66,7 @@ const planos = [
     valorReal: "89.00",
     valorMensal: "29.67",
     popular: "",
-    link: "https://pay.hotmart.com/M88583033R?off=g358x3tf&checkoutMode=6",
+    link: "https://pay.hotmart.com/M88583033R?off=g358x3tf&checkoutMode=10&bid=1700760424493",
     desc: "Prorrogado a cada 3 meses após a oferta introdutória de 3 meses pelo preço total de $ 42,84",
   },
 ];
@@ -96,7 +103,7 @@ export const Step26 = () => {
   const [seconds, setSeconds] = useState(0);
 
   const [selectedLink, setSelectedLink] = useState<string>(
-    "https://pay.hotmart.com/O83035043N?off=gytek6ka&checkoutMode=10"
+    "https://pay.hotmart.com/M88583033R?off=49xej25e&checkoutMode=10&bid=1700760505704"
   );
   const [, setSelectedDesc] = useState<string>(
     "Estendido mensalmente após oferta introdutória de 1 mês pelo preço total de $ 28,56"
@@ -197,15 +204,16 @@ export const Step26 = () => {
           </div>
         </p>
       </div>
-      <section className="bg-[#FBFDFF] flex flex-col px-5 md:p-0 ">
+      <section className="bg-[#FBFDFF] flex flex-col px-8 md:p-0 ">
         <div className="container m-auto py-7 w-full sm:w-[80%] md:w-[90%] lg:w-[80%] 2xl:w-[60%] flex flex-col items-center gap-10 ">
+          <img src={Logo} alt="Logo" className="w-[150px] m-5" />
           <h1 className="text-3xl md:text-4xl text-center font-thin">
-            Aqui está o seu programa Hypnozio
+            Aqui está o seu programa Hypnozia
           </h1>
 
           <div className="bg-white shadow-xl rounded-md border sm:w-[80%] md:w-[90%] lg:w-[80%] 2xl:w-[60%]">
             <div className="bg-[#EEF0FF] p-5 flex flex-col gap-5">
-              <h1 className="text-lg md:text-2xl font-extrabold text-center">
+              <h1 className="text-2xl font-extrabold text-center">
                 Seu programa de perda de peso
               </h1>
               <p className="text-sm md:text-base">
@@ -255,12 +263,12 @@ export const Step26 = () => {
                 return (
                   <div
                     key={index}
-                    className="flex items-center justify-between gap-4"
+                    className="flex items-center justify-between gap-4 "
                   >
-                    <p className="text-sm h-[40px] w-[40px] rounded-full bg-[#1FA37E] flex items-center justify-center text-white font-bold md:text-base">
+                    <p className="text-sm !h-[40px] !w-[40px] rounded-full bg-[#1FA37E] flex items-center justify-center text-white font-bold md:text-base">
                       {item.numero}
                     </p>
-                    <div className="bg-[#FAFAFF] rounded-md w-full p-2">
+                    <div className="flex-1 bg-[#FAFAFF] rounded-md w-full p-2">
                       <strong className="text-sm md:text-base font-semibold">
                         Semana {item.numero}:
                       </strong>
@@ -270,7 +278,7 @@ export const Step26 = () => {
                 );
               })}
               <div className="flex  items-center justify-between gap-4">
-                <p className="h-[40px] w-[40px] rounded-full bg-[#E1CB00] flex items-center justify-center text-white font-bold text-xl">
+                <p className="!h-[40px] !w-[40px] rounded-[50%] bg-[#E1CB00] flex items-center justify-center text-white font-bold text-xl">
                   <svg
                     width="16"
                     height="16"
@@ -284,7 +292,7 @@ export const Step26 = () => {
                     ></path>
                   </svg>
                 </p>
-                <div className="bg-[#FAFAFF] rounded-md w-full p-2">
+                <div className="bg-[#FAFAFF] flex-1 rounded-md w-full p-2">
                   <strong className="text-sm md:text-base font-semibold">
                     Programa pós-semana 6:
                   </strong>
@@ -320,7 +328,7 @@ export const Step26 = () => {
                 </svg>
                 <p className="text-base leading-6">
                   {" "}
-                  Acesso total à biblioteca de áudio Hypnozio
+                  Acesso total à biblioteca de áudio Hypnosia
                 </p>
               </li>
               <li className="flex gap-3 items-center ">
@@ -482,30 +490,43 @@ export const Step26 = () => {
               Por que os clientes nos amam?
             </h1>
 
-            <ul className="grid grid-cols-1 md:grid-cols-3 gap-10 justify-center items-start  ">
-              {info.map((item, index) => {
-                return (
-                  <div
-                    key={index}
-                    className="flex flex-col items-center gap-3 "
-                  >
-                    <img
-                      src={item.icon}
-                      alt=""
-                      className="rounded-ss-[70px] rounded-ee-[70px] "
-                    />
-                    <ul className="flex gap-2 self-start text-yellow-500">
-                      <FaStar></FaStar>
-                      <FaStar></FaStar>
-                      <FaStar></FaStar>
-                      <FaStar></FaStar>
-                      <FaStar></FaStar>
-                    </ul>
+            <ul className="grid grid-cols-1 gap-10 justify-center items-start w-[400px] px-8 ">
+              <Swiper
+                pagination={{
+                  dynamicBullets: true,
+                }}
+                modules={[Pagination]}
+                className="mySwiper"
+              >
+                {info.map((item, index) => {
+                  return (
+                    <SwiperSlide>
+                      {" "}
+                      <div
+                        key={index}
+                        className="flex flex-col items-center gap-3 "
+                      >
+                        <img
+                          src={item.icon}
+                          alt=""
+                          className="rounded-ss-[70px] rounded-ee-[70px] "
+                        />
+                        <ul className="flex gap-2 self-start text-yellow-500">
+                          <FaStar></FaStar>
+                          <FaStar></FaStar>
+                          <FaStar></FaStar>
+                          <FaStar></FaStar>
+                          <FaStar></FaStar>
+                        </ul>
 
-                    <p className="text-left text-base">{item.text}</p>
-                  </div>
-                );
-              })}
+                        <p className="text-left text-sm md:text-base">
+                          {item.text}
+                        </p>
+                      </div>
+                    </SwiperSlide>
+                  );
+                })}
+              </Swiper>
             </ul>
           </div>
           <div className="w-full md:w-[60%] xl:w-[50%] flex flex-col items-center gap-10">
@@ -513,17 +534,19 @@ export const Step26 = () => {
               <h1 className="text-[22px] md:text-2xl font-normal text-center">
                 Como funciona?
               </h1>
-              <div className="flex items-center bg-[#F0F0FA] rounded-md w-full p-2 gap-4">
+              <div className="flex items-center justify-between bg-[#F0F0FA] rounded-md w-full p-2 gap-4">
                 <p className="h-[40px] w-[40px] rounded-full bg-[#1FA37E] flex items-center justify-center text-white font-bold text-base">
                   1
                 </p>
-                <p>Encontre um lugar tranquilo onde você possa relaxar</p>
+                <p className="flex-1">
+                  Encontre um lugar tranquilo onde você possa relaxar
+                </p>
               </div>
               <div className="flex items-center bg-[#F0F0FA] rounded-md w-full p-2 gap-4">
-                <p className="h-[40px] w-[40px] rounded-full bg-[#1FA37E] flex items-center justify-center text-white font-bold text-base">
+                <p className="h-[40px] w-[40px]  rounded-full bg-[#1FA37E] flex items-center justify-center text-white font-bold text-base">
                   2
                 </p>
-                <p>
+                <p className="flex-1">
                   Abra a gravação de hipnoterapia enviada a você por e-mail pelo
                   hipnoterapeuta
                 </p>
@@ -533,24 +556,18 @@ export const Step26 = () => {
                   3
                 </p>
 
-                <p>Ouça uma sessão de 20 minutos por dia</p>
+                <p className="flex-1">Ouça uma sessão de 20 minutos por dia</p>
               </div>
               <div className="flex items-center bg-[#F0F0FA] rounded-md w-full p-2 gap-4">
                 <p className="h-[40px] w-[40px] rounded-full bg-[#1FA37E] flex items-center justify-center text-white font-bold text-base">
                   4
                 </p>
-                <p>Aproveite os primeiros resultados em uma semana</p>
+                <p className="flex-1">
+                  Aproveite os primeiros resultados em uma semana
+                </p>
               </div>
             </div>
 
-            <div className="flex flex-col gap-3 justify-between items-center bg-[#F2F4FF] px-10 md:px-20 p-5 rounded-lg ">
-              <p className="text-2xl text-[#3a5ba9] text-center">
-                Mudando a perspectiva
-              </p>
-              <audio controls className="custom-audio-controls">
-                <source src={Aula} type="audio/mp3" />
-              </audio>
-            </div>
             <button
               type="submit"
               className="!font-bold gap-3 w-full bg-[#3a5ba9] text-white py-5 md:py-6 rounded-xl flex items-center justify-center hover:bg-[#3a5ba9d5]"
@@ -560,112 +577,166 @@ export const Step26 = () => {
               <FaArrowRight />
             </button>
 
-            <Accordion
-              open={open === 1}
-              className="bg-white px-3  rounded-2xl border border-b-none "
-            >
-              <AccordionHeader
-                className="text-black  text-sm md:text-base  flex items-center "
-                onClick={() => handleOpen(1)}
-              >
-                O que acontece depois de eu fazer o pedido?
-                <svg
-                  width="35"
-                  height="35"
-                  viewBox="0 0 25 24"
-                  fill="none"
-                  xmlns="http://www.w3.org/2000/svg"
-                >
-                  <path
-                    d="M11.9752 14.475L8.80017 11.3C8.56684 11.0667 8.51267 10.7959 8.63767 10.4875C8.76267 10.1792 8.99184 10.025 9.32517 10.025H15.6752C16.0085 10.025 16.2377 10.1792 16.3627 10.4875C16.4877 10.7959 16.4335 11.0667 16.2002 11.3L13.0252 14.475C12.9418 14.5584 12.8585 14.6167 12.7752 14.65C12.6918 14.6834 12.6002 14.7 12.5002 14.7C12.4002 14.7 12.3085 14.6834 12.2252 14.65C12.1418 14.6167 12.0585 14.5584 11.9752 14.475Z"
-                    fill="#1B1B1F"
-                  ></path>
-                </svg>
-              </AccordionHeader>
-              <AccordionBody className="text-base">
-                Você receberá cada sessão de hipnoterapia por e-mail, com
-                instruções claras incluídas. Cada sessão é uma gravação de 20
-                minutos que pode ser facilmente acessada em seu telefone, tablet
-                ou computador.
-              </AccordionBody>
-            </Accordion>
+            <h1 className="text-[22px] md:text-2xl font-normal text-center">
+              Ainda não tenho certeza?
+              <br />
+              Ouça sua primeira sessâo
+            </h1>
+            <div className="flex flex-col gap-3 justify-between items-center bg-[#F2F4FF] px-5 md:px-20 p-5 rounded-lg w-full">
+              <p className="text-2xl text-[#3a5ba9] text-center">
+                Mudando a perspectiva
+              </p>
+              <audio controls className="custom-audio-controls">
+                <source src={Aula} type="audio/mp3" />
+              </audio>
+            </div>
 
-            <Accordion
-              open={open === 2}
-              className="bg-white px-3  rounded-2xl border border-b-none"
-            >
-              <AccordionHeader
-                className="text-black  text-sm md:text-base flex items-center justify-between"
-                onClick={() => handleOpen(2)}
+            <div className="flex flex-col gap-3">
+              <Accordion
+                open={open === 1}
+                className="bg-white  rounded-2xl border border-b-none "
               >
-                Como foi criado o nosso curso de hipnoterapia?
-                <svg
-                  width="35"
-                  height="35"
-                  viewBox="0 0 25 24"
-                  fill="none"
-                  xmlns="http://www.w3.org/2000/svg"
+                <AccordionHeader
+                  className="text-black  ps-5 !m-0 text-sm md:text-base  "
+                  onClick={() => handleOpen(1)}
                 >
-                  <path
-                    d="M11.9752 14.475L8.80017 11.3C8.56684 11.0667 8.51267 10.7959 8.63767 10.4875C8.76267 10.1792 8.99184 10.025 9.32517 10.025H15.6752C16.0085 10.025 16.2377 10.1792 16.3627 10.4875C16.4877 10.7959 16.4335 11.0667 16.2002 11.3L13.0252 14.475C12.9418 14.5584 12.8585 14.6167 12.7752 14.65C12.6918 14.6834 12.6002 14.7 12.5002 14.7C12.4002 14.7 12.3085 14.6834 12.2252 14.65C12.1418 14.6167 12.0585 14.5584 11.9752 14.475Z"
-                    fill="#1B1B1F"
-                  ></path>
-                </svg>
-              </AccordionHeader>
-              <AccordionBody className="text-base">
-                O hipnoterapeuta certificado Edward Miller, com mais de 20 anos
-                de experiência na área, criou nosso curso de hipnoterapia. Ele
-                ajudou com sucesso milhares de clientes com problemas
-                semelhantes.
-              </AccordionBody>
-            </Accordion>
-            <Accordion
-              open={open === 3}
-              className="bg-white px-3  rounded-2xl border border-b-none"
-            >
-              <AccordionHeader
-                className="text-black  text-sm md:text-base  flex items-center justify-between"
-                onClick={() => handleOpen(3)}
-              >
-                A hipnoterapia é segura para você?
-                <svg
-                  width="35"
-                  height="35"
-                  viewBox="0 0 25 24"
-                  fill="none"
-                  xmlns="http://www.w3.org/2000/svg"
-                >
-                  <path
-                    d="M11.9752 14.475L8.80017 11.3C8.56684 11.0667 8.51267 10.7959 8.63767 10.4875C8.76267 10.1792 8.99184 10.025 9.32517 10.025H15.6752C16.0085 10.025 16.2377 10.1792 16.3627 10.4875C16.4877 10.7959 16.4335 11.0667 16.2002 11.3L13.0252 14.475C12.9418 14.5584 12.8585 14.6167 12.7752 14.65C12.6918 14.6834 12.6002 14.7 12.5002 14.7C12.4002 14.7 12.3085 14.6834 12.2252 14.65C12.1418 14.6167 12.0585 14.5584 11.9752 14.475Z"
-                    fill="#1B1B1F"
-                  ></path>
-                </svg>
-              </AccordionHeader>
-              <AccordionBody className="text-base">
-                A hipnoterapia é uma forma segura de terapia realizada em um
-                ambiente descontraído e confortável. Não envolve nenhum contato
-                físico ou uso de medicamentos, sendo uma opção de baixo risco
-                para quem busca uma abordagem de cura não invasiva.
-              </AccordionBody>
-            </Accordion>
+                  <p className="">
+                    {" "}
+                    O que acontece depois de eu fazer o pedido?
+                  </p>
+                  <div className="">
+                    <svg
+                      width="35"
+                      height="35"
+                      viewBox="0 0 25 24"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        d="M11.9752 14.475L8.80017 11.3C8.56684 11.0667 8.51267 10.7959 8.63767 10.4875C8.76267 10.1792 8.99184 10.025 9.32517 10.025H15.6752C16.0085 10.025 16.2377 10.1792 16.3627 10.4875C16.4877 10.7959 16.4335 11.0667 16.2002 11.3L13.0252 14.475C12.9418 14.5584 12.8585 14.6167 12.7752 14.65C12.6918 14.6834 12.6002 14.7 12.5002 14.7C12.4002 14.7 12.3085 14.6834 12.2252 14.65C12.1418 14.6167 12.0585 14.5584 11.9752 14.475Z"
+                        fill="#1B1B1F"
+                      ></path>
+                    </svg>
+                  </div>
+                </AccordionHeader>
+                <AccordionBody className="text-base px-5">
+                  Você receberá cada sessão de hipnoterapia por e-mail, com
+                  instruções claras incluídas. Cada sessão é uma gravação de 20
+                  minutos que pode ser facilmente acessada em seu telefone,
+                  tablet ou computador.
+                </AccordionBody>
+              </Accordion>
 
-            <Card className="mt-6 p-3 rounded-2xl shadow-xl border">
-              <CardBody className="rounded-2xl border">
-                <Typography
-                  variant="h5"
-                  color="blue-gray"
-                  className="mb-2 font-normal"
+              <Accordion
+                open={open === 2}
+                className="bg-white  rounded-2xl border border-b-none "
+              >
+                <AccordionHeader
+                  className="text-black  ps-5 !m-0 text-sm md:text-base  "
+                  onClick={() => handleOpen(2)}
                 >
-                  Garantia de devolução de dinheiro
-                </Typography>
-                <Typography>
+                  <p className="">
+                    {" "}
+                    Como foi criado o nosso curso de hipnoterapia?
+                  </p>
+                  <div className="">
+                    <svg
+                      width="35"
+                      height="35"
+                      viewBox="0 0 25 24"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        d="M11.9752 14.475L8.80017 11.3C8.56684 11.0667 8.51267 10.7959 8.63767 10.4875C8.76267 10.1792 8.99184 10.025 9.32517 10.025H15.6752C16.0085 10.025 16.2377 10.1792 16.3627 10.4875C16.4877 10.7959 16.4335 11.0667 16.2002 11.3L13.0252 14.475C12.9418 14.5584 12.8585 14.6167 12.7752 14.65C12.6918 14.6834 12.6002 14.7 12.5002 14.7C12.4002 14.7 12.3085 14.6834 12.2252 14.65C12.1418 14.6167 12.0585 14.5584 11.9752 14.475Z"
+                        fill="#1B1B1F"
+                      ></path>
+                    </svg>
+                  </div>
+                </AccordionHeader>
+                <AccordionBody className="text-base px-5">
+                  O hipnoterapeuta certificado Edward Miller, com mais de 20
+                  anos de experiência na área, criou nosso curso de
+                  hipnoterapia. Ele ajudou com sucesso milhares de clientes com
+                  problemas semelhantes.
+                </AccordionBody>
+              </Accordion>
+
+              <Accordion
+                open={open === 3}
+                className="bg-white  rounded-2xl border border-b-none "
+              >
+                <AccordionHeader
+                  className="text-black  ps-5 !m-0 text-sm md:text-base  "
+                  onClick={() => handleOpen(3)}
+                >
+                  <p className=""> A hipnoterapia é segura para você?</p>
+                  <div className="">
+                    <svg
+                      width="35"
+                      height="35"
+                      viewBox="0 0 25 24"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        d="M11.9752 14.475L8.80017 11.3C8.56684 11.0667 8.51267 10.7959 8.63767 10.4875C8.76267 10.1792 8.99184 10.025 9.32517 10.025H15.6752C16.0085 10.025 16.2377 10.1792 16.3627 10.4875C16.4877 10.7959 16.4335 11.0667 16.2002 11.3L13.0252 14.475C12.9418 14.5584 12.8585 14.6167 12.7752 14.65C12.6918 14.6834 12.6002 14.7 12.5002 14.7C12.4002 14.7 12.3085 14.6834 12.2252 14.65C12.1418 14.6167 12.0585 14.5584 11.9752 14.475Z"
+                        fill="#1B1B1F"
+                      ></path>
+                    </svg>
+                  </div>
+                </AccordionHeader>
+                <AccordionBody className="text-base px-5">
+                  <p className="font-poppins">
+                    A hipnoterapia é uma forma segura de terapia realizada em um
+                    ambiente descontraído e confortável. Não envolve nenhum
+                    contato físico ou uso de medicamentos, sendo uma opção de
+                    baixo risco para quem busca uma abordagem de cura não
+                    invasiva.
+                  </p>
+                </AccordionBody>
+              </Accordion>
+            </div>
+
+            <button
+              type="submit"
+              className="!font-bold gap-3 w-full bg-[#3a5ba9] text-white py-5 md:py-6 rounded-xl flex items-center justify-center hover:bg-[#3a5ba9d5]"
+              onClick={handleButtonClickPlanos}
+            >
+              Peça agora
+              <FaArrowRight />
+            </button>
+            <Card className="mt-6  rounded-2xl shadow-xl border bg-[#FAFFFD]">
+              <CardBody className="">
+                <div className="flex gap-1 mb-3  justify-between items-center  ">
+                  <div>
+                    <svg
+                      width="40"
+                      height="40"
+                      viewBox="0 0 40 40"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        d="M16.041 22.8334L17.541 18.0417L13.5827 14.9584H18.416L19.9993 10L21.541 14.9584H26.416L22.4577 18.0417L23.916 22.8334L19.9993 19.875L16.041 22.8334ZM10.166 38.3334V25.6667C8.91602 24.3612 8.02018 22.9306 7.47852 21.375C6.93685 19.8195 6.66602 18.25 6.66602 16.6667C6.66602 12.8889 7.94379 9.72226 10.4993 7.16671C13.0549 4.61115 16.2216 3.33337 19.9993 3.33337C23.7771 3.33337 26.9438 4.61115 29.4993 7.16671C32.0549 9.72226 33.3327 12.8889 33.3327 16.6667C33.3327 18.25 33.0618 19.8195 32.5202 21.375C31.9785 22.9306 31.0827 24.3612 29.8327 25.6667V38.3334L19.9993 35.0417L10.166 38.3334ZM19.9993 27.5C23.0271 27.5 25.5896 26.4514 27.6868 24.3542C29.7841 22.257 30.8327 19.6945 30.8327 16.6667C30.8327 13.6389 29.7841 11.0764 27.6868 8.97921C25.5896 6.88199 23.0271 5.83337 19.9993 5.83337C16.9716 5.83337 14.4091 6.88199 12.3118 8.97921C10.2146 11.0764 9.16602 13.6389 9.16602 16.6667C9.16602 19.6945 10.2146 22.257 12.3118 24.3542C14.4091 26.4514 16.9716 27.5 19.9993 27.5ZM12.666 34.8334L19.9993 32.5417L27.3327 34.8334V27.7084C26.2216 28.5139 25.0271 29.0973 23.7493 29.4584C22.4716 29.8195 21.2216 30 19.9993 30C18.7771 30 17.5271 29.8195 16.2493 29.4584C14.9716 29.0973 13.7771 28.5139 12.666 27.7084V34.8334Z"
+                        fill="#006A63"
+                      ></path>
+                    </svg>
+                  </div>
+
+                  <h1 className="font-normal text-black text-[22px] w!-full !px-0">
+                    Garantia de devolução do dinheiro em 30 dias
+                  </h1>
+                </div>
+
+                <p className="text-sm">
                   Estamos confiantes de que nosso plano pode funcionar para você
                   e você obterá resultados em 4 semanas. Oferecemos garantia de
                   devolução de 100% do dinheiro aos usuários que assistiram a
                   pelo menos 4 sessões de hipnoterapia em até 30 dias após a
                   compra e não sentiram nenhuma melhora em sua relação com a
                   comida.
-                </Typography>
+                </p>
               </CardBody>
             </Card>
 
@@ -689,7 +760,7 @@ export const Step26 = () => {
                   </svg>
                   <p className="text-base leading-6">
                     {" "}
-                    Acesso total à biblioteca de áudio Hypnozio
+                    Acesso total à biblioteca de áudio Hypnosia
                   </p>
                 </li>
                 <li className="flex gap-3 items-center ">
@@ -783,7 +854,7 @@ export const Step26 = () => {
               Ainda tem dúvidas?{" "}
               <strong className="text-[#3A5BA9]">Obtenha suporte</strong>{" "}
             </p>
-            <p>Copyright © 2023 Hypnozio. Todos os direitos reservados</p>
+            <p>Copyright © 2023 Hypnosia. Todos os direitos reservados</p>
           </footer>
         </div>
       </section>
