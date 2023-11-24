@@ -5,7 +5,7 @@ import { useParams } from "react-router-dom";
 
 interface PageSelectedProps {
   step: number;
-  pergunta: string;
+  pergunta?: string;
   pergunta2?: string;
   opcoes: {
     text: string;
@@ -89,18 +89,19 @@ export const PageSelected = ({
         <div className="w-full md:w-[60%] xl:w-[50%] 2xl:w-[30%]  flex flex-col items-start gap-10">
           <li className="flex flex-col w-full gap-2 " key={step}>
             <div className="flex flex-col gap-3 mb-5 ">
-              <label className="text-start text-black w-full ">
+              <label className="text-left text-base text-black w-full ">
                 {pergunta}
               </label>
               <label
-                className={`text-start text-black w-full ${
-                  pergunta2 ? "" : "hidden"
-                }`}
+                className={`text-left
+                 text-black w-full text-2xl ${pergunta2 ? "" : "hidden"}`}
               >
                 {pergunta2}
               </label>
 
-              <p className="text-sm">Você pode selecionar quantos precisar.</p>
+              <p className="text-base text-left">
+                Você pode selecionar quantos precisar.
+              </p>
             </div>
 
             {opcoes.map((opcao) => (
@@ -108,7 +109,7 @@ export const PageSelected = ({
                 key={opcao.text}
                 className={`w-[100%]  py-[16px] px-[24px] rounded-lg border  flex items-center justify-between cursor-pointer  ${
                   selectedOptions.includes(opcao.text)
-                    ? "border-2 hover:border-[#00000083] bg-[#3a5ba984]"
+                    ? "border-2 hover:border-[#00000038] bg-[#EEF0FF]"
                     : " text-gray-700 "
                 } hover:shadow-2xl hover:text-black transition duration-300 ease-in-out border border-[#8aa8fcab]`}
               >

@@ -35,7 +35,7 @@ export const BotaoPlanos = () => {
         onClick={handleButtonClick}
         className="font-bold w-full bg-[#3a5ba9] text-white py-4 rounded-xl flex items-center justify-center hover:bg-[#3a5ba9d5]"
       >
-        Obter planos
+        Obter meu plano
       </Link>
     </div>
   );

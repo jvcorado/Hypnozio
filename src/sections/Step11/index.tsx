@@ -4,7 +4,7 @@ export const Step11 = () => {
   const info = [
     {
       step: 11,
-      pergunta: "Com quais custos financeiros você teve que lidar?",
+      pergunta2: "Com quais custos financeiros você teve que lidar?",
       opcoes: [
         {
           text: "Muitas consultas médicas",
@@ -36,7 +36,7 @@ export const Step11 = () => {
         <PageSelected
           key={item.step}
           step={item.step}
-          pergunta={item.pergunta}
+          pergunta2={item.pergunta2}
           opcoes={item.opcoes}
           inicio="43.9%"
           final="48.25%"

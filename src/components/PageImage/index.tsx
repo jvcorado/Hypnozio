@@ -32,8 +32,8 @@ export const PageImagem = ({
       <div
         className={`pt-10 container m-auto  w-full md:w-[60%] xl:w-[50%] 2xl:w-[20%] flex flex-col items-center gap-5 justify-start px-3 md:px-5`}
       >
-        <h1 className={`text-left  text-black `}>{text}</h1>
-        <h1 className={`text-left  text-black w-full`}>{text2}</h1>
+        <h1 className={`text-left text-base  text-black `}>{text}</h1>
+        <h1 className={`text-left  text-base  text-black w-full`}>{text2}</h1>
         <img
           src={img}
           alt=""
@@ -41,12 +41,8 @@ export const PageImagem = ({
             rounded ? "rounded-ss-[70px] rounded-ee-[70px]" : "rounded-none"
           }`}
         />
-        <h1 className={`text-lg  md:text-base text-left  text-black `}>
-          {text3}
-        </h1>
-        <h1 className={`text-lg  md:text-base text-left  text-black `}>
-          {textRodape}
-        </h1>
+        <h1 className={`text-base  text-left  text-black `}>{text3}</h1>
+        <h1 className={`text-base  text-left  text-black `}>{textRodape}</h1>
         <div className=" w-full mb-10 ">
           {" "}
           <Botao step={id} />

@@ -75,11 +75,11 @@ export const Step25 = () => {
                 É provável que Hypnozio funcione para você!
               </h1>
 
-              <p className="text-xl md:text-2xl leading-7">
+              <p className="text-lg md:text-2xl leading-7">
                 89% das pessoas semelhantes a você atingiram o peso desejado
                 após terminarem o programa.
               </p>
-              <p className="text-xl md:text-2xl  leading-7">
+              <p className="text-lg md:text-2xl  leading-7">
                 Você perderá{" "}
                 <span className="text-red-500 font-bold">
                   {diferencaDePeso}kg
@@ -239,7 +239,7 @@ export const Step25 = () => {
             <div className="w-full md:w-[60%] 2xl:w-[30%] m-auto ">
               <BotaoPlanos />
             </div>
-            <h1 className="text-xl md:text-2xl leading-7 2xl:w-[50%] text-center">
+            <h1 className="text-2xl leading-7 2xl:w-[50%] text-center">
               Seu resumo pessoal
             </h1>
             <ul className="grid grid-cols-1 lg:grid-cols-2 2xl:grid-cols-3 gap-3 justify-between items-center ">
@@ -421,8 +421,10 @@ export const Step25 = () => {
               <BotaoPlanos />
             </div>
             <div className="bg-white rounded-md shadow-xl border p-7 flex flex-col gap-7 w-full lg:w-[80%] 2xl:w-[50%]">
-              <h1 className="text-center text-3xl leading-7">Nossa promessa</h1>
-              <p className="text-base leading-6">
+              <h1 className="text-center text-2xl md:text-3xl leading-7">
+                Nossa promessa
+              </h1>
+              <p className="text-[14px] md:text-base leading-6">
                 Prometemos fornecer sessões de hipnoterapia da mais alta
                 qualidade, projetadas especificamente para apoiar seus esforços
                 de perda de peso. Nossa equipe de hipnoterapeutas experientes
@@ -430,7 +432,7 @@ export const Step25 = () => {
                 ganho de peso e ajudá-lo a construir hábitos saudáveis para uma
                 perda de peso sustentável.
               </p>
-              <p className="text-base leading-6">
+              <p className="text-[14px] md:text-base leading-6">
                 Estamos confiantes de que você verá resultados com nosso produto
                 e estamos aqui para apoiá-lo em cada etapa do processo. Se você
                 tiver alguma dúvida ou preocupação, não hesite em entrar em

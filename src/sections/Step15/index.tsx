@@ -8,7 +8,7 @@ export const Step15 = () => {
     {
       step: 15,
       pergunta:
-        "Ótimo - agora sabemos um pouco sobre sua experiência atual com a alimentação e como ela impacta sua vida.",
+        " Ótimo - agora sabemos um pouco sobre sua experiência atual com a alimentação e como ela impacta sua vida.",
       pergunta2:
         "Imagine-se daqui a 6 semanas, como você gostaria de se sentir?",
       opcoes: [

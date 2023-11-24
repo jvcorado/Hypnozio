@@ -71,15 +71,15 @@ export const Step6 = () => {
   return (
     <section className="flex flex-col h-full md:h-screen ">
       <Header inicio="21.75%" final="26.5%" />
-      <div className="container m-auto flex flex-col items-center  overflow-y-auto my-10 gap-7 px-3 md:px-5 ">
-        <div className="w-full md:w-[60%] xl:w-[50%] 2xl:w-[30%]  flex flex-col items-start gap-10">
+      <div className="container m-auto flex flex-col items-center my-10 gap-7 px-3 md:px-5 ">
+        <div className="w-full md:w-[60%] xl:w-[50%] 2xl:w-[30%]  flex flex-col items-start gap-5">
           <h1 className="text-2xl md:text-xl !leading-[30px] text-start text-black w-full">
             Sabemos que os motivos do excesso de peso de cada pessoa são únicos.
             Quais são os seus?
           </h1>
-          <p></p>
+          <p>Selecione a sua opção:</p>
 
-          <div className=" w-full flex flex-col items-center justify-center gap-2">
+          <div className="w-full flex flex-col items-center justify-center gap-2">
             <Link
               // eslint-disable-next-line @typescript-eslint/restrict-template-expressions
               to={`/step/7/${idade}/1/?${parametro}`}
@@ -132,15 +132,6 @@ export const Step6 = () => {
             >
               <div className="flex items-center gap-5">
                 <p className="text-base leading-5">Não tenho certeza</p>
-              </div>
-            </Link>
-            <Link
-              // eslint-disable-next-line @typescript-eslint/restrict-template-expressions
-              to={`/step/7/${idade}/7/?${parametro}`}
-              className="w-full bg-[#ffffff] py-[16px] px-[24px] rounded-lg border  border-[#8aa8fcab] flex items-center justify-between hover:shadow-2xl hover:border-[#00000083]"
-            >
-              <div className="flex items-center gap-5">
-                <p className="text-base leading-5">Mais de 71</p>
               </div>
             </Link>
           </div>

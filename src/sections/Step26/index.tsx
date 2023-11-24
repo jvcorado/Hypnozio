@@ -14,6 +14,8 @@ import Client1 from "../../assets/image/client1.webp";
 import Client2 from "../../assets/image/client2.webp";
 import Client3 from "../../assets/image/client3.webp";
 import { FaStar } from "react-icons/fa";
+import { FaArrowRight } from "react-icons/fa";
+
 import React from "react";
 
 const info = [
@@ -34,27 +36,30 @@ const info = [
 
 const planos = [
   {
-    date: "1 mês",
-    valorAntigo: "59.90",
-    valor: "49.00",
+    date: "2 meses",
+    ancoragem: "89.70",
+    valorReal: "69.00",
+    valorMensal: "34.50",
     popular: "",
-    link: "https://pay.hotmart.com/M88583033R?off=t7hsp5i1&checkoutMode=6",
+    link: "https://pay.hotmart.com/M88583033R?off=qxq4zicu&checkoutMode=10&bid=1700760313493",
     desc: `Prorrogado a cada 7 dias após a oferta introdutória de 7 dias pelo preço total de $ 9, 99`,
   },
   {
-    date: "3 meses",
-    valorAntigo: "126.90",
-    valor: "79.00",
+    date: "6 meses",
+    ancoragem: "165.10",
+    valorReal: "127.00",
+    valorMensal: "21.17",
     popular: "Most Popular",
-    link: "https://pay.hotmart.com/M88583033R?off=g358x3tf&checkoutMode=6",
+    link: "https://pay.hotmart.com/M88583033R?off=49xej25e&checkoutMode=6",
     desc: "Estendido mensalmente após oferta introdutória de 1 mês pelo preço total de $ 28,56",
   },
   {
-    date: "6 meses",
-    valorAntigo: "199.90",
-    valor: "127.00",
+    date: "3 meses",
+    ancoragem: "115.70",
+    valorReal: "89.00",
+    valorMensal: "29.67",
     popular: "",
-    link: "https://pay.hotmart.com/M88583033R?off=49xej25e&checkoutMode=6",
+    link: "https://pay.hotmart.com/M88583033R?off=g358x3tf&checkoutMode=6",
     desc: "Prorrogado a cada 3 meses após a oferta introdutória de 3 meses pelo preço total de $ 42,84",
   },
 ];
@@ -194,17 +199,20 @@ export const Step26 = () => {
       </div>
       <section className="bg-[#FBFDFF] flex flex-col px-5 md:p-0 ">
         <div className="container m-auto py-7 w-full sm:w-[80%] md:w-[90%] lg:w-[80%] 2xl:w-[60%] flex flex-col items-center gap-10 ">
-          <h1 className="text-4xl text-center font-thin">
+          <h1 className="text-3xl md:text-4xl text-center font-thin">
             Aqui está o seu programa Hypnozio
           </h1>
 
           <div className="bg-white shadow-xl rounded-md border sm:w-[80%] md:w-[90%] lg:w-[80%] 2xl:w-[60%]">
             <div className="bg-[#EEF0FF] p-5 flex flex-col gap-5">
-              <h1 className="text-[24px] font-extrabold text-center">
+              <h1 className="text-lg md:text-2xl font-extrabold text-center">
                 Seu programa de perda de peso
               </h1>
-              <p>
-                <strong> Faixa etária: </strong>
+              <p className="text-sm md:text-base">
+                <strong className="text-sm md:text-base font-semibold">
+                  {" "}
+                  Faixa etária:{" "}
+                </strong>
 
                 {Idade >= 71
                   ? "Mais de 71"
@@ -217,8 +225,10 @@ export const Step26 = () => {
                   : Idade}
                 {Idade >= 71 ? "" : ` - ${Idade}`}
               </p>
-              <p>
-                <strong>Motivo do excesso de peso: </strong>
+              <p className="text-sm md:text-base">
+                <strong className="text-sm md:text-base font-semibold">
+                  Motivo do excesso de peso:{" "}
+                </strong>
                 {opcao === "1"
                   ? "Comer emocional"
                   : opcao === "2"
@@ -233,8 +243,10 @@ export const Step26 = () => {
                   ? "Não tenho certeza"
                   : ""}
               </p>
-              <p>
-                <strong>Meta de peso: </strong>
+              <p className="text-sm md:text-base">
+                <strong className="text-sm md:text-base font-semibold">
+                  Meta de peso:{" "}
+                </strong>
                 {pesoDesejado} kg
               </p>
             </div>
@@ -245,11 +257,13 @@ export const Step26 = () => {
                     key={index}
                     className="flex items-center justify-between gap-4"
                   >
-                    <p className="h-[40px] w-[40px] rounded-full bg-[#1FA37E] flex items-center justify-center text-white font-bold text-base">
+                    <p className="text-sm h-[40px] w-[40px] rounded-full bg-[#1FA37E] flex items-center justify-center text-white font-bold md:text-base">
                       {item.numero}
                     </p>
                     <div className="bg-[#FAFAFF] rounded-md w-full p-2">
-                      <strong>Semana {item.numero}:</strong>
+                      <strong className="text-sm md:text-base font-semibold">
+                        Semana {item.numero}:
+                      </strong>
                       <p>{item.text}</p>
                     </div>
                   </div>
@@ -271,7 +285,9 @@ export const Step26 = () => {
                   </svg>
                 </p>
                 <div className="bg-[#FAFAFF] rounded-md w-full p-2">
-                  <strong>Programa pós-semana 6:</strong>
+                  <strong className="text-sm md:text-base font-semibold">
+                    Programa pós-semana 6:
+                  </strong>
                   <p>
                     Desbloqueie seu plano contínuo de gerenciamento de perda de
                     peso
@@ -285,7 +301,7 @@ export const Step26 = () => {
             id="planos"
             className="bg-white rounded-md shadow-xl border p-7 flex flex-col gap-7 sm:w-[80%] md:w-[90%] lg:w-[80%] 2xl:w-[60%] "
           >
-            <h1 className="text-center text-3xl leading-7">
+            <h1 className="text-center text-[22px] md:text-3xl leading-7">
               Todos os planos incluem
             </h1>
             <ul className="flex flex-col gap-3">
@@ -383,7 +399,7 @@ export const Step26 = () => {
           </div>
 
           <div className="flex flex-col gap-6 w-full sm:w-[80%] md:w-[90%] lg:w-[80%] 2xl:w-[60%]">
-            <h1 className="text-2xl font-extrabold text-center">
+            <h1 className="text-[22px] md:text-2xl font-normal text-center">
               Seu plano perfeito
             </h1>
 
@@ -416,11 +432,11 @@ export const Step26 = () => {
                           </p>
                           <div className="flex gap-3 items-center">
                             <p className=" text-sm  line-through text-[#FF4958] decoration-[#FF4958]">
-                              R${item.valorAntigo}
+                              R${item.ancoragem}
                             </p>
-                            <p className=" text-sm ">R${item.valorAntigo}</p>
+                            <p className=" text-sm ">R${item.valorReal}</p>
                           </div>
-                          <p className="text-xs">Faturado a cada dois mêses</p>
+                          <p className="text-xs">Faturado a cada {item.date}</p>
                           {item.popular === "Most Popular" && (
                             <p className="text-xs text-white px-4 p-1 bg-[#FF4958] rounded-full font-bold ">
                               Mais popular
@@ -431,8 +447,10 @@ export const Step26 = () => {
                       <div className="border-s-2 h-[100px] "></div>
                       <div className="flex gap-3 items-center pe-2 ">
                         <div className="flex flex-col respon gap-1 items-center ">
-                          <p className="text-3xl font-bold">R${item.valor}</p>
-                          <p>por mês</p>
+                          <p className="text-2xl md:text-3xl font-bold">
+                            R${item.valorMensal}
+                          </p>
+                          <p className="text-base">por mês</p>
                         </div>
                       </div>
                     </div>
@@ -442,24 +460,25 @@ export const Step26 = () => {
             })}
           </div>
           <div className="w-full flex flex-col gap-4 md:w-[60%] xl:w-[50%] ">
-            <Button
+            <button
               type="submit"
-              id="submitButton"
-              size="lg"
-              className="font-bold w-full bg-[#3a5ba9] text-white py-6 rounded-xl flex items-center justify-center hover:bg-[#3a5ba9d5]"
+              className="!font-bold gap-3 w-full bg-[#3a5ba9] text-white py-5 md:py-6 rounded-xl flex items-center justify-center hover:bg-[#3a5ba9d5]"
               onClick={handleGetPlanClick}
             >
-              Obter meu plano
-            </Button>
+              Peça agora
+              <FaArrowRight />
+            </button>
             {/*    <p className="text-sm md:text-base text-center  m-auto">
               {selectedDesc}
             </p> */}
             {/* Renderize a descrição selecionada */}
           </div>
-          <p>Cancele a qualquer momento | Sem taxas ocultas</p>
+          <p className="text-center text-sm md:text-base">
+            Cancele a qualquer momento | Sem taxas ocultas
+          </p>
           <img src={Checkout} alt="" className="w-[400px]" />
           <div className="w-full flex flex-col items-center gap-5 ">
-            <h1 className="text-2xl font-extrabold text-center">
+            <h1 className="text-[22px] md:text-2xl font-normal text-center">
               Por que os clientes nos amam?
             </h1>
 
@@ -491,7 +510,7 @@ export const Step26 = () => {
           </div>
           <div className="w-full md:w-[60%] xl:w-[50%] flex flex-col items-center gap-10">
             <div className="flex flex-col gap-5">
-              <h1 className="text-2xl font-extrabold text-center">
+              <h1 className="text-[22px] md:text-2xl font-normal text-center">
                 Como funciona?
               </h1>
               <div className="flex items-center bg-[#F0F0FA] rounded-md w-full p-2 gap-4">
@@ -524,30 +543,29 @@ export const Step26 = () => {
               </div>
             </div>
 
-            <div className="flex flex-col gap-3 justify-between items-center bg-[#F2F4FF]  px-20 p-5 rounded-lg ">
-              <p className="text-2xl text-[#3a5b9] text-center">
+            <div className="flex flex-col gap-3 justify-between items-center bg-[#F2F4FF] px-10 md:px-20 p-5 rounded-lg ">
+              <p className="text-2xl text-[#3a5ba9] text-center">
                 Mudando a perspectiva
               </p>
               <audio controls className="custom-audio-controls">
                 <source src={Aula} type="audio/mp3" />
               </audio>
             </div>
-            <Button
+            <button
               type="submit"
-              id="submitButton"
-              size="lg"
-              className="font-bold w-full bg-[#3a5ba9] text-white py-6 rounded-xl flex items-center justify-center hover:bg-[#3a5ba9d5]"
+              className="!font-bold gap-3 w-full bg-[#3a5ba9] text-white py-5 md:py-6 rounded-xl flex items-center justify-center hover:bg-[#3a5ba9d5]"
               onClick={handleButtonClickPlanos}
             >
-              Obter meu plano
-            </Button>
+              Peça agora
+              <FaArrowRight />
+            </button>
 
             <Accordion
               open={open === 1}
               className="bg-white px-3  rounded-2xl border border-b-none "
             >
               <AccordionHeader
-                className="text-black flex items-center justify-between"
+                className="text-black  text-sm md:text-base  flex items-center "
                 onClick={() => handleOpen(1)}
               >
                 O que acontece depois de eu fazer o pedido?
@@ -577,7 +595,7 @@ export const Step26 = () => {
               className="bg-white px-3  rounded-2xl border border-b-none"
             >
               <AccordionHeader
-                className="text-black flex items-center justify-between"
+                className="text-black  text-sm md:text-base flex items-center justify-between"
                 onClick={() => handleOpen(2)}
               >
                 Como foi criado o nosso curso de hipnoterapia?
@@ -606,7 +624,7 @@ export const Step26 = () => {
               className="bg-white px-3  rounded-2xl border border-b-none"
             >
               <AccordionHeader
-                className="text-black flex items-center justify-between"
+                className="text-black  text-sm md:text-base  flex items-center justify-between"
                 onClick={() => handleOpen(3)}
               >
                 A hipnoterapia é segura para você?
@@ -633,7 +651,11 @@ export const Step26 = () => {
 
             <Card className="mt-6 p-3 rounded-2xl shadow-xl border">
               <CardBody className="rounded-2xl border">
-                <Typography variant="h5" color="blue-gray" className="mb-2">
+                <Typography
+                  variant="h5"
+                  color="blue-gray"
+                  className="mb-2 font-normal"
+                >
                   Garantia de devolução de dinheiro
                 </Typography>
                 <Typography>
@@ -648,7 +670,7 @@ export const Step26 = () => {
             </Card>
 
             <div className="bg-white rounded-md shadow-xl border p-7 flex flex-col gap-7 w-full">
-              <h1 className="text-center text-3xl leading-7">
+              <h1 className="text-center text-2xl md:text-3xl leading-7 font-normal">
                 Todos os planos incluem
               </h1>
               <ul className="flex flex-col gap-3">
@@ -747,19 +769,14 @@ export const Step26 = () => {
           </div>
 
           <div className="w-full flex flex-col gap-4 md:w-[60%] xl:w-[50%] ">
-            <Button
+            <button
               type="submit"
-              id="submitButton"
-              size="lg"
-              className="font-bold w-full bg-[#3a5ba9] text-white py-6 rounded-xl flex items-center justify-center hover:bg-[#3a5ba9d5]"
+              className="!font-bold gap-3 w-full bg-[#3a5ba9] text-white py-5 md:py-6 rounded-xl flex items-center justify-center hover:bg-[#3a5ba9d5]"
               onClick={handleButtonClickPlanos}
             >
-              Obter meu plano
-            </Button>
-            {/*    <p className="text-sm md:text-base text-center  m-auto">
-              {selectedDesc}
-            </p> */}
-            {/* Renderize a descrição selecionada */}
+              Peça agora
+              <FaArrowRight />
+            </button>
           </div>
           <footer className="text-center flex flex-col gap-3">
             <p>

@@ -78,7 +78,7 @@ export const Step24 = () => {
         <div className="conteudo !border-0 !shadow-none !p-0">
           <div className="final !border-0 !shadow-none">
             <h2 className="!text-2xl !font-normal text-center">
-              Seu programa está quase pronto!
+              Estamos analisando suas resposta...
             </h2>
             <div className="loading" ref={loadingRef}>
               <div className="circuloUm"></div>
