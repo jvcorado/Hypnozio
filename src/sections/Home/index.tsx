@@ -29,110 +29,154 @@ export const Home = () => {
   }
 
   return (
-    <div className="flex flex-col justify-between  md:h-screen">
-      <div className="container m-auto px-8 py-10">
-        <div className="mb-10">
-          <img src={Logo} alt="Logo Hipnózio " className="w-[150px]" />
-        </div>
-        <div className="flex flex-col md:flex-row items-center justify-between gap-10 md:gap-2 2xl:gap-10 ">
-          <div className="flex-1 flex flex-col gap-5">
-            <h1 className="text-3xl md:text-2xl lg:text-3xl xl:text-4xl 2xl:text-5xl leading-10 2xl:leading-[52px] font-normal">
-              Encontre e corrija a causa raiz do{" "}
-              <strong className="text-[#FF4958]">excesso de peso</strong> usando
-              a auto-hipnose
-            </h1>{" "}
-            <p className="text-base md:text-sm lg:text-base font-light text-[#1b1b1f]">
-              Nosso programa de hipnoterapia foi desenvolvido para ajudá-lo a
-              mudar sua relação com a comida, no conforto da sua casa.
-            </p>
-            <p className="text-base md:text-sm lg:text-base font-light text-[#1b1b1f]">
-              Responda algumas perguntas para começar:
-            </p>
-            <p className="text-base md:text-sm lg:text-base font-light text-[#77777a]">
-              Selecione o seu sexo
-            </p>
-            <div className="grid grid-cols-1 md:grid-cols-2  2xl:grid-cols-3 items-center justify-center gap-4">
-              <Link
-                to={`/step/1/?${parametro}`}
-                className="bg-[#FF4958] rounded-md p-5 text-center font-bold text-lg text-white "
-              >
-                Mulher
-              </Link>
-              <Link
-                to={`/step/1/?${parametro}`}
-                className="bg-[#3A5BA9] rounded-md p-5 text-center font-bold text-lg text-white"
-              >
-                Homem
-              </Link>
-              <Link
-                to={`/step/1/?${parametro}`}
-                className="bg-white border  border-black rounded-md p-5 text-center font-bold text-lg text-black"
-              >
-                Outro
-              </Link>
-            </div>
-            <div>
-              <div className="flex flex-row items-center gap-3 md:gap-1 ">
-                {" "}
-                <p className="text-sm md:text-xs lg:text-base font-semibold">
-                  Excelentes avaliações de clientes:
-                </p>
-                <div className="flex gap-1 2xl:gap-1">
-                  <StarIcon />
-                  <StarIcon />
-                  <StarIcon />
-                  <StarIcon />
-                  <StarIcon />
-                </div>
-              </div>
-
-              <Feedback
-                avatar={Avatar}
-                id={1}
-                key={1}
-                name="Jane W."
-                text="Que descoberta. Eu nem sabia que era receptivo à hipnoterapia! Ajudou-me depois de algumas sessões."
-              ></Feedback>
-            </div>
+    <>
+      <div className="hidden lg:flex flex-col justify-between  md:h-screen">
+        <div className="container m-auto px-8 py-10">
+          <div className="mb-10">
+            <img src={Logo} alt="Logo Hipnózio " className="w-[150px]" />
           </div>
-          <div className="flex-1">
-            <img src={Image} alt="Mulher com fone de ouvido" />
+          <div className="flex flex-col md:flex-row items-center justify-between gap-10 md:gap-2 2xl:gap-10 ">
+            <div className="flex-1 flex flex-col gap-5">
+              <h1 className="text-3xl md:text-2xl lg:text-3xl xl:text-4xl 2xl:text-5xl leading-10 2xl:leading-[52px] font-normal">
+                Encontre e corrija a causa raiz do{" "}
+                <strong className="text-[#FF4958]">excesso de peso</strong>{" "}
+                usando a auto-hipnose
+              </h1>{" "}
+              <p className="text-base md:text-sm lg:text-base font-light text-[#1b1b1f]">
+                Nosso programa de hipnoterapia foi desenvolvido para ajudá-lo a
+                mudar sua relação com a comida, no conforto da sua casa.
+              </p>
+              <p className="text-base md:text-sm lg:text-base font-light text-[#1b1b1f]">
+                Responda algumas perguntas para começar:
+              </p>
+              <p className="text-base md:text-sm lg:text-base font-light text-[#77777a]">
+                Selecione o seu sexo
+              </p>
+              <div className="grid grid-cols-1 md:grid-cols-2  2xl:grid-cols-3 items-center justify-center gap-4">
+                <Link
+                  to={`/step/1/?${parametro}`}
+                  className="bg-[#FF4958] rounded-md p-5 text-center font-bold text-lg text-white "
+                >
+                  Mulher
+                </Link>
+                <Link
+                  to={`/step/1/?${parametro}`}
+                  className="bg-[#3A5BA9] rounded-md p-5 text-center font-bold text-lg text-white"
+                >
+                  Homem
+                </Link>
+                <Link
+                  to={`/step/1/?${parametro}`}
+                  className="bg-white border  border-black rounded-md p-5 text-center font-bold text-lg text-black"
+                >
+                  Outro
+                </Link>
+              </div>
+              <div>
+                <div className="flex flex-row items-center gap-3 md:gap-1 ">
+                  {" "}
+                  <p className="text-sm md:text-xs lg:text-base font-semibold">
+                    Excelentes avaliações de clientes:
+                  </p>
+                  <div className="flex gap-1 2xl:gap-1">
+                    <StarIcon />
+                    <StarIcon />
+                    <StarIcon />
+                    <StarIcon />
+                    <StarIcon />
+                  </div>
+                </div>
+
+                <Feedback
+                  avatar={Avatar}
+                  id={1}
+                  key={1}
+                  name="Jane W."
+                  text="Que descoberta. Eu nem sabia que era receptivo à hipnoterapia! Ajudou-me depois de algumas sessões."
+                ></Feedback>
+              </div>
+            </div>
+            <div className="flex-1">
+              <img src={Image} alt="Mulher com fone de ouvido" />
+            </div>
           </div>
         </div>
       </div>
-      {/*    <footer className=" bg-[#303034] text-white py-10">
-        <div className="container m-auto px-3   flex flex-col gap-5">
-          <p>
-            Rebilita UAB, Gedimino str. 45-7,
-            <br />
-            LT-44239 Kaunas, Lituânia
-            <br />
-            support@hypnozio.com
-          </p>
-          <p>
-            Isenção de responsabilidade: o site não pode e não contém conselhos
-            e/ou opiniões profissionais ou definitivamente precisas sobre
-            produtos/serviços. As informações e/ou opiniões sobre
-            produtos/serviços são fornecidas apenas para fins educacionais e de
-            entretenimento e não substituem o aconselhamento profissional.
-            Conseqüentemente, antes de tomar qualquer ação com base em suas
-            pontuações, encorajamos você a consultar os profissionais
-            apropriados. Não fornecemos nenhum tipo de aconselhamento
-            profissional ou definitivamente preciso sobre produtos/serviços. O
-            USO DE CONFIANÇA DE QUALQUER INFORMAÇÃO CONTIDA NO SITE É
-            EXCLUSIVAMENTE POR SUA CONTA E RISCO.
-          </p>
-          <hr className="border-white" />
-          <ul className="flex flex-col gap-5 md:gap-0 md:flex-row md:items-center justify-between">
-            <div className="flex flex-col xl:flex-row xl:gap-5">
-              <li>Contatos</li>
-              <li>Política de Privacidade</li>
-              <li>Termos e Condições</li>
+
+      {/* mobile */}
+
+      <div className="lg:hidden flex flex-col justify-between  md:h-screen">
+        <div className="container m-auto px-8 py-10">
+          <div className="mb-10">
+            <img src={Logo} alt="Logo Hipnózio " className="w-[150px]" />
+          </div>
+          <div className="flex flex-col md:flex-row items-center justify-between gap-10 md:gap-2 2xl:gap-10 ">
+            <div className="flex-1 flex flex-col gap-5">
+              <h1 className="text-3xl md:text-2xl lg:text-3xl xl:text-4xl 2xl:text-5xl leading-10 2xl:leading-[52px] font-normal">
+                Encontre e corrija a causa raiz do{" "}
+                <strong className="text-[#FF4958]">excesso de peso</strong>{" "}
+                usando a auto-hipnose
+              </h1>{" "}
+              <div className="flex-1">
+                <img src={Image} alt="Mulher com fone de ouvido" />
+              </div>
+              <p className="text-base md:text-sm lg:text-base font-light text-[#1b1b1f]">
+                Nosso programa de hipnoterapia foi desenvolvido para ajudá-lo a
+                mudar sua relação com a comida, no conforto da sua casa.
+              </p>
+              <p className="text-base md:text-sm lg:text-base font-light text-[#1b1b1f]">
+                Responda algumas perguntas para começar:
+              </p>
+              <p className="text-base md:text-sm lg:text-base font-light text-[#77777a]">
+                Selecione o seu sexo
+              </p>
+              <div className="grid grid-cols-1 md:grid-cols-2  2xl:grid-cols-3 items-center justify-center gap-4">
+                <Link
+                  to={`/step/1/?${parametro}`}
+                  className="bg-[#FF4958] rounded-md p-5 text-center font-bold text-lg text-white "
+                >
+                  Mulher
+                </Link>
+                <Link
+                  to={`/step/1/?${parametro}`}
+                  className="bg-[#3A5BA9] rounded-md p-5 text-center font-bold text-lg text-white"
+                >
+                  Homem
+                </Link>
+                <Link
+                  to={`/step/1/?${parametro}`}
+                  className="bg-white border  border-black rounded-md p-5 text-center font-bold text-lg text-black"
+                >
+                  Outro
+                </Link>
+              </div>
+              <div>
+                <div className="flex flex-row items-center gap-3 md:gap-1 ">
+                  {" "}
+                  <p className="text-sm md:text-xs lg:text-base font-semibold">
+                    Excelentes avaliações de clientes:
+                  </p>
+                  <div className="flex gap-1 2xl:gap-1">
+                    <StarIcon />
+                    <StarIcon />
+                    <StarIcon />
+                    <StarIcon />
+                    <StarIcon />
+                  </div>
+                </div>
+
+                <Feedback
+                  avatar={Avatar}
+                  id={1}
+                  key={1}
+                  name="Jane W."
+                  text="Que descoberta. Eu nem sabia que era receptivo à hipnoterapia! Ajudou-me depois de algumas sessões."
+                ></Feedback>
+              </div>
             </div>
-            <li>® 2023 Hipnózio. Todos os direitos reservados</li>
-          </ul>
+          </div>
         </div>
-      </footer> */}
-    </div>
+      </div>
+    </>
   );
 };

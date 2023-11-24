@@ -16,9 +16,12 @@ export const PageMedidas: React.FC<CommonPageProps> = ({
   inicio,
   final,
 }) => {
-  const [altura, setAltura] = useState<number>();
-  const [peso, setPeso] = useState<number>();
-  const [pesoDesejado, setPesoDesejado] = useState<number>();
+  const [altura, setAltura] = useState<number | string | undefined>();
+  const [peso, setPeso] = useState<number | string | undefined>();
+  const [pesoDesejado, setPesoDesejado] = useState<
+    number | string | undefined
+  >();
+
   const [isValid, setIsValid] = useState(false);
 
   const { idade, opcao } = useParams();
@@ -28,18 +31,46 @@ export const PageMedidas: React.FC<CommonPageProps> = ({
   const parametro = queryString.substring(queryString.indexOf("src="));
 
   const handleAlturaChange = (e: ChangeEvent<HTMLInputElement>) => {
-    setAltura(Number(e.target.value));
-    validateForm();
+    const value = Number(e.target.value);
+
+    if (!isNaN(value)) {
+      setAltura(value);
+      validateForm();
+    } else {
+      // Se o usuário não inserir um número, define o estado como vazio.
+      setAltura("");
+      // Ou você pode definir um estado de erro e exibi-lo no UI, se preferir.
+      // setError("Por favor, insira um valor numérico para a altura.");
+    }
   };
 
   const handlePesoChange = (e: ChangeEvent<HTMLInputElement>) => {
-    setPeso(Number(e.target.value));
-    validateForm();
+    const value = Number(e.target.value);
+
+    if (!isNaN(value)) {
+      setPeso(value);
+      validateForm();
+    } else {
+      // Adicione um tratamento para o caso em que o input não é um número.
+      // Por exemplo, você pode definir um estado para rastrear um erro e exibi-lo no UI.
+      // Neste exemplo, estou apenas logando uma mensagem no console.
+      setPeso("");
+      console.error("Por favor, insira um valor numérico para a altura.");
+      // Se preferir, pode definir um estado de erro e exibi-lo no UI.
+    }
   };
 
   const handlePesoDesejadoChange = (e: ChangeEvent<HTMLInputElement>) => {
-    setPesoDesejado(Number(e.target.value));
-    validateForm();
+    const value = Number(e.target.value);
+
+    if (!isNaN(value)) {
+      setPesoDesejado(value);
+      validateForm();
+    } else {
+      setPesoDesejado("");
+      console.error("Por favor, insira um valor numérico para a altura.");
+      // Se preferir, pode definir um estado de erro e exibi-lo no UI.
+    }
   };
 
   const validateForm = () => {
@@ -55,9 +86,9 @@ export const PageMedidas: React.FC<CommonPageProps> = ({
   };
 
   const calcularIMC = () => {
-    if (altura && pesoDesejado !== undefined) {
-      const alturaMetros = altura / 100;
-      const imcDesejado = pesoDesejado / (alturaMetros * alturaMetros);
+    if (altura !== undefined && pesoDesejado !== undefined) {
+      const alturaMetros = Number(altura) / 100;
+      const imcDesejado = Number(pesoDesejado) / (alturaMetros * alturaMetros);
       return imcDesejado;
     }
     return null;
