@@ -9,5 +9,5 @@ export default defineConfig({
       '@': '/src',
     },
   },
-  base: 'https://hypnosia.com.br/',
+  base: 'https://hypnozio.vercel.app/',
 })
